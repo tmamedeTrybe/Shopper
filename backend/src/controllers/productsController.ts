@@ -10,6 +10,11 @@ class ProductsControllers {
 
         return res.status(products.code).json(products.products);
     };
+
+    validateProducts = async (req: Request, res: Response) => {
+        const products = await this.productsService.validateProducts(req.body);
+        return res.status(products.code).json(products.products);
+    }
 };
 
 export default ProductsControllers;
