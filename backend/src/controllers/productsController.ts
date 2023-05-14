@@ -7,7 +7,6 @@ class ProductsControllers {
 
     getProducts = async (req: Request, res: Response) => {
         const products = await this.productsService.getProducts();
-
         return res.status(products.code).json(products.products);
     };
 
