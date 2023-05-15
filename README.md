@@ -1,4 +1,12 @@
-# Shopper
+# Teste técnico Full Stack - Shopper
+
+> Desenvolvido por: Thiago Mamede Rodrigues
+> - Email: tmamede2@gmail.com
+> - LinkedIn:https://www.linkedin.com/in/thiago-mamede/
+> - GitHub: https://github.com/tmamedeTrybe
+
+
+<br />
 
 - Criação de uma aplicação Full Stack que atualiza preços de produtos de um e-commerce utilizando um arquivo .csv que contem as informações de produtos e preços a alterar.
 
