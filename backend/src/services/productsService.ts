@@ -86,6 +86,17 @@ class ProductsService {
 
     };
 
+    async updatePrices(productsValidated:responseProducts[]) {
+            productsValidated.forEach(async (product) => {
+                await this.productsModel.update(
+                    { sales_price: product.new_price },
+                    { where: { code: product.code } }
+                    )
+            });
+    
+        return {code: 200, message: "Preços atualizados"}
+    }
+
 }
 
 export default ProductsService;

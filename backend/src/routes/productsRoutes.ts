@@ -9,5 +9,6 @@ const productsController = new ProductsControllers(new ProductsService(Product))
 
 productsRoutes.get('/products', productsController.getProducts);
 productsRoutes.post('/reprice', productsController.validateProducts);
+productsRoutes.patch('/reprice', productsController.updatePrices);
 
 export default productsRoutes;

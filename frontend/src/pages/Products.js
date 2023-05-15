@@ -7,6 +7,7 @@ function Products() {
     const [productsValidated, setProductsValidated] = useState([]);
     const [enableButton, setEnableButton] = useState(true);
     const [file, setFile] = useState();
+    const [message, setMessage] = useState();
 
     useEffect(() => {
         const enableButton = () => {
@@ -41,6 +42,20 @@ function Products() {
         setProductsValidated(productsData);
         console.log(productsValidated);
     };
+
+    const updatePrices = async () => {
+        const response = await fetch('http://localhost:3001/reprice', {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(productsValidated),
+        });
+        const updateData = await response.json();
+        setProductsValidated([]);
+        setMessage(updateData);
+        
+    }
    
     return (
         <div className={ styles.container } >
@@ -71,6 +86,9 @@ function Products() {
                     onClick={ updatePrices }
                 >Atualizar
                 </button>
+                {
+                    message && <p>{ message }</p>
+                }
             </section>
         </div>
     );

@@ -13,6 +13,11 @@ class ProductsControllers {
     validateProducts = async (req: Request, res: Response) => {
         const products = await this.productsService.validateProducts(req.body);
         return res.status(products.code).json(products.products);
+    };
+
+    updatePrices = async (req: Request, res: Response) => {
+        const pricesUpdated =  await this.productsService.updatePrices(req.body);
+        return res.status(pricesUpdated.code).json(pricesUpdated.message);
     }
 };
 
