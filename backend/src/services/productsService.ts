@@ -46,7 +46,7 @@ class ProductsService {
                                     erro: "Novo preço do produto não preenchido"
                                 }
                                 return repriceChecked;
-                            } else if (reprice.new_price < product.cost_price) {
+                            } else if (Number(reprice.new_price) < Number(product.cost_price)) {
                                 const repriceChecked:responseProducts = {
                                     code: reprice.product_code,
                                     name: product.name,
