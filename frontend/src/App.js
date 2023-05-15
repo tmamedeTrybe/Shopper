@@ -1,4 +1,3 @@
-import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Products from './pages/Products';
 
@@ -10,6 +9,6 @@ function App() {
       </Routes>
     </div>
   );
-}
+};
 
 export default App;

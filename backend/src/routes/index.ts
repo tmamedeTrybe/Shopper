@@ -1,5 +1,5 @@
-import productsRoutes from "./productsRoutes";
+import productsRoutes from './productsRoutes';
 
 export {
-    productsRoutes
+  productsRoutes,
 };
